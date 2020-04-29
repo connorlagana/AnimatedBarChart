@@ -16,13 +16,16 @@ struct ContentView: View {
         ZStack {
             
             Color(red: 78/255, green: 219/255, blue: 132/255).edgesIgnoringSafeArea(.all)
-            Text("Bars!").font(.system(size: 34)).fontWeight(.heavy)
-            
-            Picker(selection: $pickedItem, label: Text("detroit")) {
-                Text("tired")
-                Text("tired")
-                Text("tired")
+            VStack {
+                Text("Bars!").font(.system(size: 34)).fontWeight(.heavy)
+                
+                Picker(selection: $pickedItem, label: Text("detroit")) {
+                    Text("tired")
+                    Text("tired")
+                    Text("tired")
+                }.pickerStyle(SegmentedPickerStyle())
             }
+            
         }
     }
 }

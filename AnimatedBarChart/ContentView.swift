@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var pickedItem = 0
+    
     var body: some View {
         ZStack {
             
             Color(red: 78/255, green: 219/255, blue: 132/255).edgesIgnoringSafeArea(.all)
             Text("Bars!").font(.system(size: 34)).fontWeight(.heavy)
             
-            Picker(selection: <#T##Binding<_>#>, label: Text("detroit")) {
+            Picker(selection: $pickedItem, label: Text("detroit")) {
                 Text("tired")
                 Text("tired")
                 Text("tired")

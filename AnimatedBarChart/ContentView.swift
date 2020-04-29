@@ -19,10 +19,10 @@ struct ContentView: View {
             VStack {
                 Text("Bars!").font(.system(size: 34)).fontWeight(.heavy)
                 
-                Picker(selection: $pickedItem, label: Text("detroit")) {
-                    Text("tired")
-                    Text("tired")
-                    Text("tired")
+                Picker(selection: $pickedItem, label: Text("")) {
+                    Text("First").tag(0)
+                    Text("Second").tag(1)
+                    Text("Third").tag(2)
                 }.pickerStyle(SegmentedPickerStyle())
             }
             
